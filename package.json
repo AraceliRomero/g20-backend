@@ -1,0 +1,20 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "mi primer proyecto de node",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node ejercicio.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AraceliRomero/g20-backend.git"
+  },
+  "author": "araceli.romero85@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AraceliRomero/g20-backend/issues"
+  },
+  "homepage": "https://github.com/AraceliRomero/g20-backend#readme"
+}

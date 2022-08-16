@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/AraceliRomero/g20-backend/issues"
   },
-  "homepage": "https://github.com/AraceliRomero/g20-backend#readme"
+  "homepage": "https://github.com/AraceliRomero/g20-backend#readme",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }

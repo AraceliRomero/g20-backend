@@ -1,21 +1,46 @@
-// console.log("hola mundo")
+// HTTP
+const http = require("http")
 
-// 1 - Funcion que recoiba de parametro un nombre del
-// process.argv, y si existe que me imprima “Bienvenido y el nombre”
-// SI NO, imprimir “Afuera de aqui”
+//1. Se crea un servidos http
+// 2. poner a su servidor a escuchar 
+// 3. Port
+// EMPOIT
+/**
+ * Punto final
+ * 1. Metodo => GET; PATCH, PUT, POST, DELETE 
+ * 2. url => local hot 
+ */
+const server = http.createServer((request,response) => {
 
-// Undefined es porque tenemos vacio la función 
+    //Leer el request
 
-const nombre = process.argv[2]
+    const{ url, method} = request
 
-// Lo que sea que este después de un return, no se hace , el objetico de un reurn es imprimir algo y salirse 
-const printName = (nombre) => {
+    console.log("method", method)
+    console.log("url", url)
+
     
-    if(nombre) {  // no sea nulo o undefined, me lo tiene que imprimir el bienvenido 
-        console.log(`Bienvenido ${nombre}`)
-        return // Salte
-    }   
-    console.log("Afuera de aquí")
-}
+    // GET-> localhost:8080
+    //BIenvenido estas en el get, estas leyendo 
 
-printName(nombre)
+    if(method === "GET" && url === "/") {
+        response.write("hola, bienvenido a mi servidor modificado para insomnia, lo modifique otra vez")
+        response.end()  // ya finalizo }
+    }
+
+
+    //POST -> localhost:8080
+
+    // responder
+//     response.write("hola, bienvenido a mi servidor modificado para insomnia, lo modifique otra vez")
+//     response.end()  // ya finalizo }
+
+// }) 
+// 2. parametros
+// 1 => PORT
+// 2 => callback  => lo que se va a hacer cuando se empiexe a escuchar 
+server.listen(8080, () => {
+    console.log("Server listening ...")
+})
+
+
